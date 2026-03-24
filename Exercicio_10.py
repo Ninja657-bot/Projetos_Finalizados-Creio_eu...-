@@ -43,7 +43,6 @@ while True:
                                     time.sleep(1)
                                     print("Tente Novamente")
                                     time.sleep(1.5)
-                                    
                                     continue
 
                             salario = float(input("salario: "))
@@ -60,7 +59,8 @@ while True:
                         
                         case "2":
                             os.system("cls")
-                            continue
+                            break
+                            voltar = True
                         
                         case _:
                             os.system("cls")
@@ -69,7 +69,7 @@ while True:
                             time.sleep(2)
                             os.system("cls")
                             continue
-                
+            
                 for i, pessoa in enumerate(lista, start=1):
                     print(f"\nPessoa {i}")
                     print(f"Nome: {pessoa['nome']}")
@@ -132,7 +132,9 @@ while True:
                     print("Opção Inválida")
                     print("Tente novamente")
                     os.system("cls")
-                    continue   
+                    continue
+            if voltar:
+                continue   
         case "2":
             os.system("cls")
             soma_salarios = 0
